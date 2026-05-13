@@ -1,0 +1,90 @@
+# Nmap 7.95 scan initiated Tue May 12 17:20:11 2026 as: /usr/lib/nmap/nmap --privileged -sV -sC -p- -oN recon_scan.txt 192.168.57.128
+Nmap scan report for 192.168.57.128
+Host is up (0.00068s latency).
+Not shown: 65529 closed tcp ports (reset)
+PORT      STATE SERVICE  VERSION
+22/tcp    open  ssh      Dropbear sshd (protocol 2.0)
+53/tcp    open  domain   dnsmasq 2.73
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.73
+80/tcp    open  http     LuCI Lua http config
+|_http-title: Did not follow redirect to https://192.168.57.128/
+443/tcp   open  ssl/http LuCI Lua http config
+|_http-title: Site doesn't have a title (text/html).
+| ssl-cert: Subject: commonName=OpenWrt/organizationName=OpenWrt2e410863/stateOrProvinceName=Somewhere/countryName=ZZ
+| Not valid before: 2026-05-13T02:40:10
+|_Not valid after:  2028-05-12T02:40:10
+|_ssl-date: 2026-05-13T03:37:59+00:00; +5h30m09s from scanner time.
+5515/tcp  open  unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, NULL, SMBProgNeg, SSLSessionReq, X11Probe: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|   GenericLines: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|     found
+|     found
+|   GetRequest: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|     GET: not found
+|     found
+|   HTTPOptions, RTSPRequest: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|     OPTIONS: not found
+|     found
+|   Help: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|     HELP
+|     found
+|   Kerberos: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|     found
+|   RPCCheck: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|     syntax error: unexpected word (expecting ")")
+|   TLSSessionReq: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|     random1random2random3random4
+|     found
+|   TerminalServerCookie: 
+|     [***]Successfully Connected to IoTGoat's Backdoor[***]
+|_    Cookie:: not found
+65534/tcp open  telnet   BusyBox telnetd
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port5515-TCP:V=7.95%I=7%D=5/12%Time=6A03A412%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,37,"\[\*\*\*\]Successfully\x20Connected\x20to\x20IoTGoat's\x20Backdo
+SF:or\[\*\*\*\]\n")%r(GenericLines,59,"\[\*\*\*\]Successfully\x20Connected
+SF:\x20to\x20IoTGoat's\x20Backdoor\[\*\*\*\]\nsh:\x20\r:\x20not\x20found\n
+SF:sh:\x20\r:\x20not\x20found\n")%r(GetRequest,5B,"\[\*\*\*\]Successfully\
+SF:x20Connected\x20to\x20IoTGoat's\x20Backdoor\[\*\*\*\]\nsh:\x20GET:\x20n
+SF:ot\x20found\nsh:\x20\r:\x20not\x20found\n")%r(HTTPOptions,5F,"\[\*\*\*\
+SF:]Successfully\x20Connected\x20to\x20IoTGoat's\x20Backdoor\[\*\*\*\]\nsh
+SF::\x20OPTIONS:\x20not\x20found\nsh:\x20\r:\x20not\x20found\n")%r(RTSPReq
+SF:uest,5F,"\[\*\*\*\]Successfully\x20Connected\x20to\x20IoTGoat's\x20Back
+SF:door\[\*\*\*\]\nsh:\x20OPTIONS:\x20not\x20found\nsh:\x20\r:\x20not\x20f
+SF:ound\n")%r(RPCCheck,69,"\[\*\*\*\]Successfully\x20Connected\x20to\x20Io
+SF:TGoat's\x20Backdoor\[\*\*\*\]\nsh:\x20syntax\x20error:\x20unexpected\x2
+SF:0word\x20\(expecting\x20\"\)\"\)\n")%r(DNSVersionBindReqTCP,37,"\[\*\*\
+SF:*\]Successfully\x20Connected\x20to\x20IoTGoat's\x20Backdoor\[\*\*\*\]\n
+SF:")%r(DNSStatusRequestTCP,37,"\[\*\*\*\]Successfully\x20Connected\x20to\
+SF:x20IoTGoat's\x20Backdoor\[\*\*\*\]\n")%r(Help,4C,"\[\*\*\*\]Successfull
+SF:y\x20Connected\x20to\x20IoTGoat's\x20Backdoor\[\*\*\*\]\nsh:\x20HELP\r:
+SF:\x20not\x20found\n")%r(SSLSessionReq,37,"\[\*\*\*\]Successfully\x20Conn
+SF:ected\x20to\x20IoTGoat's\x20Backdoor\[\*\*\*\]\n")%r(TerminalServerCook
+SF:ie,52,"\[\*\*\*\]Successfully\x20Connected\x20to\x20IoTGoat's\x20Backdo
+SF:or\[\*\*\*\]\nsh:\x20\x03\*%\xe0Cookie::\x20not\x20found\n")%r(TLSSessi
+SF:onReq,70,"\[\*\*\*\]Successfully\x20Connected\x20to\x20IoTGoat's\x20Bac
+SF:kdoor\[\*\*\*\]\nsh:\x20\x16\x03i\x01e\x03\x03U\x1c\xa7\xe4random1rando
+SF:m2random3random4\x0c/:\x20not\x20found\n")%r(Kerberos,57,"\[\*\*\*\]Suc
+SF:cessfully\x20Connected\x20to\x20IoTGoat's\x20Backdoor\[\*\*\*\]\nsh:\x2
+SF:0qj\x81n0\x81k\xa1\x03\x02\x01\x05\xa2\x03\x02\x01:\x20not\x20found\n")
+SF:%r(SMBProgNeg,37,"\[\*\*\*\]Successfully\x20Connected\x20to\x20IoTGoat'
+SF:s\x20Backdoor\[\*\*\*\]\n")%r(X11Probe,37,"\[\*\*\*\]Successfully\x20Co
+SF:nnected\x20to\x20IoTGoat's\x20Backdoor\[\*\*\*\]\n");
+MAC Address: 00:0C:29:55:01:6D (VMware)
+Service Info: Host: IoTGoat; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: 5h30m08s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue May 12 18:07:51 2026 -- 1 IP address (1 host up) scanned in 2860.46 seconds
