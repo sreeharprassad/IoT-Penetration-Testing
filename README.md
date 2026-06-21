@@ -52,10 +52,10 @@ identify weak configurations, and evaluate exposure risks.
 
 ## Screenshots
 ### Backdoor Shell Access (F-001)
-![Backdoor]("screenshots\02_backdoor_shell.png")
+![Backdoor](screenshots\02_backdoor_shell.png)
 
 ### Nmap Scan Results
-![Nmap](screenshots\01_nmap_results.png")
+![Nmap](screenshots\01_nmap_results.png)
 
 ---
 
